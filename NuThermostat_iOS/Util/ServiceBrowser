@@ -1,0 +1,75 @@
+import Foundation
+
+class ServiceDiscoveryManager {
+    
+    typealias BrowseCallback = (DNSServiceRef?, DNSServiceFlags, UInt32, DNSServiceErrorType, UnsafePointer<Int8>?, UnsafePointer<Int8>?, UnsafePointer<Int8>?, UnsafeMutableRawPointer?) -> Void
+    typealias GetAddrInfoCallback = (DNSServiceRef?, DNSServiceFlags, UInt32, DNSServiceErrorType, UnsafePointer<Int8>?, UnsafeMutableRawPointer?) -> Void
+    
+    var browser: DNSServiceRef?
+    var socketSource: DispatchSourceRead?
+    
+    func browseCallback(sdRef: DNSServiceRef?, flags: DNSServiceFlags, interfaceIndex: UInt32, errorCode: DNSServiceErrorType, serviceName: UnsafePointer<Int8>?, regtype: UnsafePointer<Int8>?, domain: UnsafePointer<Int8>?, context: UnsafeMutableRawPointer?) {
+        if errorCode != kDNSServiceErr_NoError {
+            print("Error: \(errorCode)")
+            return
+        }
+        
+        if let serviceName = serviceName, let regtype = regtype, let domain = domain {
+            let service = String(cString: serviceName)
+            let type = String(cString: regtype)
+            let domain = String(cString: domain)
+            
+            print("Found service: \(service)")
+            print("Type: \(type)")
+            print("Domain: \(domain)")
+            
+            // Get IP address for the service
+            DNSServiceGetAddrInfo(&browser, flags, interfaceIndex, kDNSServiceProtocol_IPv4, serviceName, getAddrInfoCallback, nil)
+        }
+    }
+    
+    func getAddrInfoCallback(sdRef: DNSServiceRef?, flags: DNSServiceFlags, interfaceIndex: UInt32, errorCode: DNSServiceErrorType, hostname: UnsafePointer<Int8>?, context: UnsafeMutableRawPointer?) {
+        if errorCode != kDNSServiceErr_NoError {
+            print("Error: \(errorCode)")
+            return
+        }
+        
+        if let hostname = hostname {
+            let host = String(cString: hostname)
+            print("Hostname: \(host)")
+            
+            // Handle the hostname
+            
+            // ...
+        }
+    }
+    
+    func discoverServices() {
+        let error = DNSServiceBrowse(&browser, 0, 0, "_homekit._tcp", "local.", browseCallback, nil)
+        
+        if error != kDNSServiceErr_NoError {
+            print("Error starting service browse: \(error)")
+            return
+        }
+        
+        let runLoop = RunLoop.current
+        let socketFD = DNSServiceRefSockFD(browser)
+        socketSource = DispatchSource.makeReadSource(fileDescriptor: socketFD, queue: DispatchQueue.main)
+        
+        socketSource?.setEventHandler { [weak self] in
+            guard let self = self else { return }
+            DNSServiceProcessResult(self.browser)
+        }
+        
+        socketSource?.resume()
+        
+        runLoop.run()
+        
+        // Clean up
+        DNSServiceRefDeallocate(browser)
+    }
+    
+    func stopDiscovery() {
+        socketSource?.cancel()
+    }
+}

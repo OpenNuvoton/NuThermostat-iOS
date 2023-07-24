@@ -1,0 +1,101 @@
+//
+//  ServiceDiscoveryManager.swift
+//  NuThermostat_iOS
+//
+//  Created by MS70MAC on 2023/6/15.
+//
+
+import Foundation
+import dnssd
+
+import Foundation
+import CoreFoundation
+import Darwin.DNSServiceDiscovery
+
+class ServiceBrowser {
+    var shouldExitRunLoop = false
+    var browser: DNSServiceRef?
+    
+    func discoverServices() {
+        DispatchQueue.global().async {
+            var browser: DNSServiceRef?
+            let error = DNSServiceBrowse(&browser, 0, 0, "_matter._tcp", "local.", self.browseCallback, nil)
+            
+            if error != kDNSServiceErr_NoError {
+                print("启动服务浏览出错: \(error)")
+                return
+            }
+            
+            let backgroundRunLoop = RunLoop.current
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.shouldExitRunLoop = true
+            }
+            
+            while !self.shouldExitRunLoop {
+                let result = DNSServiceProcessResult(browser)
+                
+                if result != kDNSServiceErr_NoError {
+                    print("处理 DNS 服务结果出错: \(result)")
+                    break
+                }
+                
+                backgroundRunLoop.run(mode: .default, before: .distantFuture)
+            }
+            
+            // 清理资源
+            DNSServiceRefDeallocate(browser)
+        }
+    }
+    
+    let browseCallback: DNSServiceBrowseReply = { (sdRef, flags, interfaceIndex, errorCode, serviceName, regtype, domain, context) in
+        guard errorCode == kDNSServiceErr_NoError,
+              let serviceName = serviceName,
+              let regtype = regtype,
+              let domain = domain
+        else {
+            print("Error: \(errorCode)")
+            return
+        }
+        
+        let service = String(cString: serviceName)
+        let type = String(cString: regtype)
+        let domain = String(cString: domain)
+        
+        print("Found service: \(service)")
+        print("Type: \(type)")
+        print("Domain: \(domain)")
+        
+        // Resolve the service to get its IP address
+        var resolveService: DNSServiceRef?
+        let resolveError = DNSServiceResolve(&resolveService, 0, interfaceIndex, serviceName, regtype, domain, resolveCallback, nil)
+        
+        if resolveError != kDNSServiceErr_NoError {
+            print("解析服务出错: \(resolveError)")
+        }
+    }
+    
+    let resolveCallback: DNSServiceResolveReply = { (sdRef, flags, interfaceIndex, errorCode, fullname, hosttarget, port, txtLen, txtRecord, context) in
+        guard errorCode == kDNSServiceErr_NoError,
+              let hosttarget = hosttarget
+        else {
+            print("解析服务回调错误: \(errorCode)")
+            return
+        }
+        
+        let host = String(cString: hosttarget)
+        print("Resolved host: \(host)")
+        
+        // 处理获取到的IP地址
+        if let ipAddress = String(cString: hosttarget, encoding: .utf8) {
+            print("Resolved IP Address: \(ipAddress)")
+        }
+    }
+}
+
+let serviceBrowser = ServiceBrowser()
+serviceBrowser.discoverServices()
+
+// 在此添加适当的代码，以确保应用程序保持运行，例如启动主运行循环或等待用户输入。
+// 例如:
+// RunLoop.main.run()

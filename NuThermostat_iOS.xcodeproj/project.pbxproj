@@ -1,0 +1,851 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59E68926D705DC047F92CCEB /* Pods_NuThermostat_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3845227BF342C5F29EC4EC14 /* Pods_NuThermostat_iOS.framework */; };
+		733DBECB2A3327CE007D1CCA /* DeviceItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DBECA2A3327CE007D1CCA /* DeviceItemTableViewCell.swift */; };
+		733DBECD2A37672F007D1CCA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DBECC2A37672F007D1CCA /* SettingViewController.swift */; };
+		733FE2152A4D77F200C374F8 /* ISPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733FE2142A4D77F200C374F8 /* ISPViewController.swift */; };
+		737B32272A037A18000ACC5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B32262A037A18000ACC5C /* AppDelegate.swift */; };
+		737B32292A037A18000ACC5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B32282A037A18000ACC5C /* SceneDelegate.swift */; };
+		737B322B2A037A18000ACC5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B322A2A037A18000ACC5C /* ViewController.swift */; };
+		737B322E2A037A18000ACC5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 737B322C2A037A18000ACC5C /* Main.storyboard */; };
+		737B32302A037A25000ACC5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 737B322F2A037A25000ACC5C /* Assets.xcassets */; };
+		737B32332A037A25000ACC5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 737B32312A037A25000ACC5C /* LaunchScreen.storyboard */; };
+		737B323E2A037A26000ACC5C /* NuThermostat_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B323D2A037A26000ACC5C /* NuThermostat_iOSTests.swift */; };
+		737B32482A037A26000ACC5C /* NuThermostat_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B32472A037A26000ACC5C /* NuThermostat_iOSUITests.swift */; };
+		737B324A2A037A26000ACC5C /* NuThermostat_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B32492A037A26000ACC5C /* NuThermostat_iOSUITestsLaunchTests.swift */; };
+		73BB4B9B2A307891009E971D /* HexTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BB4B9A2A307891009E971D /* HexTool.swift */; };
+		73BB4B9E2A316C75009E971D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BB4B9D2A316C75009E971D /* DataManager.swift */; };
+		73D4C3F52A12222E00D579A0 /* TCPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4C3F42A12222E00D579A0 /* TCPManager.swift */; };
+		73D4C3F92A1234B400D579A0 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4C3F82A1234B400D579A0 /* QRCodeViewController.swift */; };
+		73D4C3FC2A1CB68F00D579A0 /* AlertTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4C3FB2A1CB68F00D579A0 /* AlertTool.swift */; };
+		73D4C4002A247AE300D579A0 /* CMDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4C3FF2A247AE300D579A0 /* CMDManager.swift */; };
+		73D4C4042A24AB4D00D579A0 /* WiFiTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4C4032A24AB4D00D579A0 /* WiFiTool.swift */; };
+		73D4C4072A24AF8E00D579A0 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D4C4062A24AF8E00D579A0 /* NetworkExtension.framework */; };
+		73E3B4E72A405E140019D479 /* NWBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E3B4E62A405E140019D479 /* NWBrowser.swift */; };
+		73E3B4ED2A4300880019D479 /* DDNS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E3B4EC2A4300880019D479 /* DDNS.swift */; };
+		73EC73822A5419010007108C /* ISPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EC73812A5419010007108C /* ISPManager.swift */; };
+		73EC73842A550A9B0007108C /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EC73832A550A9B0007108C /* FileManager.swift */; };
+		73EC73892A550C4E0007108C /* proj_m2351.json in Resources */ = {isa = PBXBuildFile; fileRef = 73EC73862A550C4E0007108C /* proj_m2351.json */; };
+		73EC738A2A550C4E0007108C /* chip_pdid.json in Resources */ = {isa = PBXBuildFile; fileRef = 73EC73872A550C4E0007108C /* chip_pdid.json */; };
+		73EC738B2A550C4E0007108C /* chip_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 73EC73882A550C4E0007108C /* chip_info.json */; };
+		73EC738D2A56BED20007108C /* ISPCommandTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EC738C2A56BED20007108C /* ISPCommandTool.swift */; };
+		7DE435320A4F7909CED36E00 /* Pods_NuThermostat_iOS_NuThermostat_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB1590CB3FDC3CE97A1CB79 /* Pods_NuThermostat_iOS_NuThermostat_iOSUITests.framework */; };
+		BFBA8A1773980F9CD74039F4 /* Pods_NuThermostat_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DB50E40F816585EEB8C29D /* Pods_NuThermostat_iOSTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		737B323A2A037A26000ACC5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 737B321B2A037A18000ACC5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 737B32222A037A18000ACC5C;
+			remoteInfo = NuThermostat_iOS;
+		};
+		737B32442A037A26000ACC5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 737B321B2A037A18000ACC5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 737B32222A037A18000ACC5C;
+			remoteInfo = NuThermostat_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2DB1590CB3FDC3CE97A1CB79 /* Pods_NuThermostat_iOS_NuThermostat_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NuThermostat_iOS_NuThermostat_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3845227BF342C5F29EC4EC14 /* Pods_NuThermostat_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NuThermostat_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A97DE1E73D000709A4DCD8A /* Pods-NuThermostat_iOS-NuThermostat_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NuThermostat_iOS-NuThermostat_iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-NuThermostat_iOS-NuThermostat_iOSUITests/Pods-NuThermostat_iOS-NuThermostat_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		733DBECA2A3327CE007D1CCA /* DeviceItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceItemTableViewCell.swift; sourceTree = "<group>"; };
+		733DBECC2A37672F007D1CCA /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		733FE2142A4D77F200C374F8 /* ISPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISPViewController.swift; sourceTree = "<group>"; };
+		737B32232A037A18000ACC5C /* NuThermostat_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NuThermostat_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		737B32262A037A18000ACC5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		737B32282A037A18000ACC5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		737B322A2A037A18000ACC5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		737B322D2A037A18000ACC5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		737B322F2A037A25000ACC5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		737B32322A037A25000ACC5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		737B32342A037A25000ACC5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		737B32392A037A26000ACC5C /* NuThermostat_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NuThermostat_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		737B323D2A037A26000ACC5C /* NuThermostat_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuThermostat_iOSTests.swift; sourceTree = "<group>"; };
+		737B32432A037A26000ACC5C /* NuThermostat_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NuThermostat_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		737B32472A037A26000ACC5C /* NuThermostat_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuThermostat_iOSUITests.swift; sourceTree = "<group>"; };
+		737B32492A037A26000ACC5C /* NuThermostat_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuThermostat_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		73BB4B9A2A307891009E971D /* HexTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexTool.swift; sourceTree = "<group>"; };
+		73BB4B9D2A316C75009E971D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		73D4C3F42A12222E00D579A0 /* TCPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPManager.swift; sourceTree = "<group>"; };
+		73D4C3F82A1234B400D579A0 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		73D4C3FB2A1CB68F00D579A0 /* AlertTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTool.swift; sourceTree = "<group>"; };
+		73D4C3FF2A247AE300D579A0 /* CMDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMDManager.swift; sourceTree = "<group>"; };
+		73D4C4032A24AB4D00D579A0 /* WiFiTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiTool.swift; sourceTree = "<group>"; };
+		73D4C4052A24AD0C00D579A0 /* NuThermostat_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NuThermostat_iOS.entitlements; sourceTree = "<group>"; };
+		73D4C4062A24AF8E00D579A0 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		73E3B4E62A405E140019D479 /* NWBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWBrowser.swift; sourceTree = "<group>"; };
+		73E3B4EC2A4300880019D479 /* DDNS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDNS.swift; sourceTree = "<group>"; };
+		73EC73812A5419010007108C /* ISPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISPManager.swift; sourceTree = "<group>"; };
+		73EC73832A550A9B0007108C /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		73EC73862A550C4E0007108C /* proj_m2351.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = proj_m2351.json; sourceTree = "<group>"; };
+		73EC73872A550C4E0007108C /* chip_pdid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chip_pdid.json; sourceTree = "<group>"; };
+		73EC73882A550C4E0007108C /* chip_info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chip_info.json; sourceTree = "<group>"; };
+		73EC738C2A56BED20007108C /* ISPCommandTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISPCommandTool.swift; sourceTree = "<group>"; };
+		9E29754B88E8379ED6E394A4 /* Pods-NuThermostat_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NuThermostat_iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-NuThermostat_iOSTests/Pods-NuThermostat_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE5B4854BE6DFC1899B5FB47 /* Pods-NuThermostat_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NuThermostat_iOS.debug.xcconfig"; path = "Target Support Files/Pods-NuThermostat_iOS/Pods-NuThermostat_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B76C80E32128D0A58380C764 /* Pods-NuThermostat_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NuThermostat_iOS.release.xcconfig"; path = "Target Support Files/Pods-NuThermostat_iOS/Pods-NuThermostat_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		BA4C04BF4CE3821DB66BEC2E /* Pods-NuThermostat_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NuThermostat_iOSTests.release.xcconfig"; path = "Target Support Files/Pods-NuThermostat_iOSTests/Pods-NuThermostat_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		C2DB50E40F816585EEB8C29D /* Pods_NuThermostat_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NuThermostat_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7A414EE8DC768CCC7CF2267 /* Pods-NuThermostat_iOS-NuThermostat_iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NuThermostat_iOS-NuThermostat_iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-NuThermostat_iOS-NuThermostat_iOSUITests/Pods-NuThermostat_iOS-NuThermostat_iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		737B32202A037A18000ACC5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59E68926D705DC047F92CCEB /* Pods_NuThermostat_iOS.framework in Frameworks */,
+				73D4C4072A24AF8E00D579A0 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		737B32362A037A26000ACC5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFBA8A1773980F9CD74039F4 /* Pods_NuThermostat_iOSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		737B32402A037A26000ACC5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DE435320A4F7909CED36E00 /* Pods_NuThermostat_iOS_NuThermostat_iOSUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38E3BBA7A21B3211E03B1092 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73D4C4062A24AF8E00D579A0 /* NetworkExtension.framework */,
+				3845227BF342C5F29EC4EC14 /* Pods_NuThermostat_iOS.framework */,
+				2DB1590CB3FDC3CE97A1CB79 /* Pods_NuThermostat_iOS_NuThermostat_iOSUITests.framework */,
+				C2DB50E40F816585EEB8C29D /* Pods_NuThermostat_iOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		737B321A2A037A18000ACC5C = {
+			isa = PBXGroup;
+			children = (
+				737B32252A037A18000ACC5C /* NuThermostat_iOS */,
+				737B323C2A037A26000ACC5C /* NuThermostat_iOSTests */,
+				737B32462A037A26000ACC5C /* NuThermostat_iOSUITests */,
+				737B32242A037A18000ACC5C /* Products */,
+				B116E490535E60FBB502EB7C /* Pods */,
+				38E3BBA7A21B3211E03B1092 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		737B32242A037A18000ACC5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				737B32232A037A18000ACC5C /* NuThermostat_iOS.app */,
+				737B32392A037A26000ACC5C /* NuThermostat_iOSTests.xctest */,
+				737B32432A037A26000ACC5C /* NuThermostat_iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		737B32252A037A18000ACC5C /* NuThermostat_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73D4C4052A24AD0C00D579A0 /* NuThermostat_iOS.entitlements */,
+				737B32262A037A18000ACC5C /* AppDelegate.swift */,
+				737B32282A037A18000ACC5C /* SceneDelegate.swift */,
+				73EC73852A550C120007108C /* ISP */,
+				73D4C3FA2A1CB66800D579A0 /* Util */,
+				73BB4B9C2A316C37009E971D /* Manager */,
+				737B322A2A037A18000ACC5C /* ViewController.swift */,
+				73D4C3F82A1234B400D579A0 /* QRCodeViewController.swift */,
+				733DBECC2A37672F007D1CCA /* SettingViewController.swift */,
+				733FE2142A4D77F200C374F8 /* ISPViewController.swift */,
+				737B322C2A037A18000ACC5C /* Main.storyboard */,
+				737B322F2A037A25000ACC5C /* Assets.xcassets */,
+				737B32312A037A25000ACC5C /* LaunchScreen.storyboard */,
+				737B32342A037A25000ACC5C /* Info.plist */,
+			);
+			path = NuThermostat_iOS;
+			sourceTree = "<group>";
+		};
+		737B323C2A037A26000ACC5C /* NuThermostat_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				737B323D2A037A26000ACC5C /* NuThermostat_iOSTests.swift */,
+			);
+			path = NuThermostat_iOSTests;
+			sourceTree = "<group>";
+		};
+		737B32462A037A26000ACC5C /* NuThermostat_iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				737B32472A037A26000ACC5C /* NuThermostat_iOSUITests.swift */,
+				737B32492A037A26000ACC5C /* NuThermostat_iOSUITestsLaunchTests.swift */,
+			);
+			path = NuThermostat_iOSUITests;
+			sourceTree = "<group>";
+		};
+		73BB4B9C2A316C37009E971D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				73D4C3F42A12222E00D579A0 /* TCPManager.swift */,
+				73D4C3FF2A247AE300D579A0 /* CMDManager.swift */,
+				73BB4B9D2A316C75009E971D /* DataManager.swift */,
+				733DBECA2A3327CE007D1CCA /* DeviceItemTableViewCell.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		73D4C3FA2A1CB66800D579A0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				73D4C3FB2A1CB68F00D579A0 /* AlertTool.swift */,
+				73D4C4032A24AB4D00D579A0 /* WiFiTool.swift */,
+				73BB4B9A2A307891009E971D /* HexTool.swift */,
+				73E3B4E62A405E140019D479 /* NWBrowser.swift */,
+				73E3B4EC2A4300880019D479 /* DDNS.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		73EC73852A550C120007108C /* ISP */ = {
+			isa = PBXGroup;
+			children = (
+				73EC73882A550C4E0007108C /* chip_info.json */,
+				73EC73872A550C4E0007108C /* chip_pdid.json */,
+				73EC73862A550C4E0007108C /* proj_m2351.json */,
+				73EC73812A5419010007108C /* ISPManager.swift */,
+				73EC73832A550A9B0007108C /* FileManager.swift */,
+				73EC738C2A56BED20007108C /* ISPCommandTool.swift */,
+			);
+			path = ISP;
+			sourceTree = "<group>";
+		};
+		B116E490535E60FBB502EB7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE5B4854BE6DFC1899B5FB47 /* Pods-NuThermostat_iOS.debug.xcconfig */,
+				B76C80E32128D0A58380C764 /* Pods-NuThermostat_iOS.release.xcconfig */,
+				C7A414EE8DC768CCC7CF2267 /* Pods-NuThermostat_iOS-NuThermostat_iOSUITests.debug.xcconfig */,
+				5A97DE1E73D000709A4DCD8A /* Pods-NuThermostat_iOS-NuThermostat_iOSUITests.release.xcconfig */,
+				9E29754B88E8379ED6E394A4 /* Pods-NuThermostat_iOSTests.debug.xcconfig */,
+				BA4C04BF4CE3821DB66BEC2E /* Pods-NuThermostat_iOSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		737B32222A037A18000ACC5C /* NuThermostat_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 737B324D2A037A26000ACC5C /* Build configuration list for PBXNativeTarget "NuThermostat_iOS" */;
+			buildPhases = (
+				D2851730345BD71C4540E5DB /* [CP] Check Pods Manifest.lock */,
+				737B321F2A037A18000ACC5C /* Sources */,
+				737B32202A037A18000ACC5C /* Frameworks */,
+				737B32212A037A18000ACC5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NuThermostat_iOS;
+			productName = NuThermostat_iOS;
+			productReference = 737B32232A037A18000ACC5C /* NuThermostat_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		737B32382A037A26000ACC5C /* NuThermostat_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 737B32502A037A26000ACC5C /* Build configuration list for PBXNativeTarget "NuThermostat_iOSTests" */;
+			buildPhases = (
+				CF70D5A5874A3CF0E66B8CA5 /* [CP] Check Pods Manifest.lock */,
+				737B32352A037A26000ACC5C /* Sources */,
+				737B32362A037A26000ACC5C /* Frameworks */,
+				737B32372A037A26000ACC5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				737B323B2A037A26000ACC5C /* PBXTargetDependency */,
+			);
+			name = NuThermostat_iOSTests;
+			productName = NuThermostat_iOSTests;
+			productReference = 737B32392A037A26000ACC5C /* NuThermostat_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		737B32422A037A26000ACC5C /* NuThermostat_iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 737B32532A037A26000ACC5C /* Build configuration list for PBXNativeTarget "NuThermostat_iOSUITests" */;
+			buildPhases = (
+				56CBC4F46170BD7D4D5653A9 /* [CP] Check Pods Manifest.lock */,
+				737B323F2A037A26000ACC5C /* Sources */,
+				737B32402A037A26000ACC5C /* Frameworks */,
+				737B32412A037A26000ACC5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				737B32452A037A26000ACC5C /* PBXTargetDependency */,
+			);
+			name = NuThermostat_iOSUITests;
+			productName = NuThermostat_iOSUITests;
+			productReference = 737B32432A037A26000ACC5C /* NuThermostat_iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		737B321B2A037A18000ACC5C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					737B32222A037A18000ACC5C = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					737B32382A037A26000ACC5C = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 737B32222A037A18000ACC5C;
+					};
+					737B32422A037A26000ACC5C = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 737B32222A037A18000ACC5C;
+					};
+				};
+			};
+			buildConfigurationList = 737B321E2A037A18000ACC5C /* Build configuration list for PBXProject "NuThermostat_iOS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 737B321A2A037A18000ACC5C;
+			productRefGroup = 737B32242A037A18000ACC5C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				737B32222A037A18000ACC5C /* NuThermostat_iOS */,
+				737B32382A037A26000ACC5C /* NuThermostat_iOSTests */,
+				737B32422A037A26000ACC5C /* NuThermostat_iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		737B32212A037A18000ACC5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				737B32332A037A25000ACC5C /* LaunchScreen.storyboard in Resources */,
+				73EC738B2A550C4E0007108C /* chip_info.json in Resources */,
+				73EC73892A550C4E0007108C /* proj_m2351.json in Resources */,
+				737B32302A037A25000ACC5C /* Assets.xcassets in Resources */,
+				73EC738A2A550C4E0007108C /* chip_pdid.json in Resources */,
+				737B322E2A037A18000ACC5C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		737B32372A037A26000ACC5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		737B32412A037A26000ACC5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56CBC4F46170BD7D4D5653A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NuThermostat_iOS-NuThermostat_iOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF70D5A5874A3CF0E66B8CA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NuThermostat_iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2851730345BD71C4540E5DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NuThermostat_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		737B321F2A037A18000ACC5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73EC73842A550A9B0007108C /* FileManager.swift in Sources */,
+				73EC73822A5419010007108C /* ISPManager.swift in Sources */,
+				73E3B4E72A405E140019D479 /* NWBrowser.swift in Sources */,
+				733DBECB2A3327CE007D1CCA /* DeviceItemTableViewCell.swift in Sources */,
+				73D4C3FC2A1CB68F00D579A0 /* AlertTool.swift in Sources */,
+				73BB4B9E2A316C75009E971D /* DataManager.swift in Sources */,
+				737B322B2A037A18000ACC5C /* ViewController.swift in Sources */,
+				73BB4B9B2A307891009E971D /* HexTool.swift in Sources */,
+				733FE2152A4D77F200C374F8 /* ISPViewController.swift in Sources */,
+				737B32272A037A18000ACC5C /* AppDelegate.swift in Sources */,
+				73D4C3F52A12222E00D579A0 /* TCPManager.swift in Sources */,
+				737B32292A037A18000ACC5C /* SceneDelegate.swift in Sources */,
+				73D4C3F92A1234B400D579A0 /* QRCodeViewController.swift in Sources */,
+				73D4C4042A24AB4D00D579A0 /* WiFiTool.swift in Sources */,
+				73EC738D2A56BED20007108C /* ISPCommandTool.swift in Sources */,
+				73D4C4002A247AE300D579A0 /* CMDManager.swift in Sources */,
+				73E3B4ED2A4300880019D479 /* DDNS.swift in Sources */,
+				733DBECD2A37672F007D1CCA /* SettingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		737B32352A037A26000ACC5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				737B323E2A037A26000ACC5C /* NuThermostat_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		737B323F2A037A26000ACC5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				737B324A2A037A26000ACC5C /* NuThermostat_iOSUITestsLaunchTests.swift in Sources */,
+				737B32482A037A26000ACC5C /* NuThermostat_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		737B323B2A037A26000ACC5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 737B32222A037A18000ACC5C /* NuThermostat_iOS */;
+			targetProxy = 737B323A2A037A26000ACC5C /* PBXContainerItemProxy */;
+		};
+		737B32452A037A26000ACC5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 737B32222A037A18000ACC5C /* NuThermostat_iOS */;
+			targetProxy = 737B32442A037A26000ACC5C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		737B322C2A037A18000ACC5C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				737B322D2A037A18000ACC5C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		737B32312A037A25000ACC5C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				737B32322A037A25000ACC5C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		737B324B2A037A26000ACC5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		737B324C2A037A26000ACC5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		737B324E2A037A26000ACC5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE5B4854BE6DFC1899B5FB47 /* Pods-NuThermostat_iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NuThermostat_iOS/NuThermostat_iOS.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XZ7PL3RVBP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NuThermostat_iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NuThermostat;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to scan QR codes";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Allow app to discover and connect to local devices using Bonjour service.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nuvoton.NuThermostat-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		737B324F2A037A26000ACC5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B76C80E32128D0A58380C764 /* Pods-NuThermostat_iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NuThermostat_iOS/NuThermostat_iOS.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XZ7PL3RVBP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NuThermostat_iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NuThermostat;
+				"INFOPLIST_KEY_CFBundleDisplayName[sdk=iphoneos*]" = NuThermostat;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to scan QR codes";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Allow app to discover and connect to local devices using Bonjour service.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nuvoton.NuThermostat-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		737B32512A037A26000ACC5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E29754B88E8379ED6E394A4 /* Pods-NuThermostat_iOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XZ7PL3RVBP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nuvoton.NuThermostat-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NuThermostat_iOS.app/NuThermostat_iOS";
+			};
+			name = Debug;
+		};
+		737B32522A037A26000ACC5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA4C04BF4CE3821DB66BEC2E /* Pods-NuThermostat_iOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XZ7PL3RVBP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nuvoton.NuThermostat-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NuThermostat_iOS.app/NuThermostat_iOS";
+			};
+			name = Release;
+		};
+		737B32542A037A26000ACC5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7A414EE8DC768CCC7CF2267 /* Pods-NuThermostat_iOS-NuThermostat_iOSUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XZ7PL3RVBP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nuvoton.NuThermostat-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NuThermostat_iOS;
+			};
+			name = Debug;
+		};
+		737B32552A037A26000ACC5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A97DE1E73D000709A4DCD8A /* Pods-NuThermostat_iOS-NuThermostat_iOSUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XZ7PL3RVBP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nuvoton.NuThermostat-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NuThermostat_iOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		737B321E2A037A18000ACC5C /* Build configuration list for PBXProject "NuThermostat_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				737B324B2A037A26000ACC5C /* Debug */,
+				737B324C2A037A26000ACC5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		737B324D2A037A26000ACC5C /* Build configuration list for PBXNativeTarget "NuThermostat_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				737B324E2A037A26000ACC5C /* Debug */,
+				737B324F2A037A26000ACC5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		737B32502A037A26000ACC5C /* Build configuration list for PBXNativeTarget "NuThermostat_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				737B32512A037A26000ACC5C /* Debug */,
+				737B32522A037A26000ACC5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		737B32532A037A26000ACC5C /* Build configuration list for PBXNativeTarget "NuThermostat_iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				737B32542A037A26000ACC5C /* Debug */,
+				737B32552A037A26000ACC5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 737B321B2A037A18000ACC5C /* Project object */;
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.developer.networking.multicast</key>
+	<true/>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string> you must add support for local network privacy permissions</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_Bonjour._tcp</string>
+		<string>_Nuvoton._tcp.</string>
+		<string>_airplay._tcp.</string>
+		<string>_dartobservatory._tcp.</string>
+		<string>_rdlink._tcp.</string>
+		<string>_services._dns-sd._udp</string>
+		<string>_hap._tcp.</string>
+		<string>_homekit._tcp.</string>
+		<string>_matter._tcp</string>
+		<string>_http._tcp.</string>
+		<string>_bonjour._tcp</string>
+		<string>_lnp._tcp.</string>
+	</array>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UISceneConfigurations</key>
+		<dict>
+			<key>UIWindowSceneSessionRoleApplication</key>
+			<array>
+				<dict>
+					<key>UISceneConfigurationName</key>
+					<string>Default Configuration</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+					<key>UISceneStoryboardFile</key>
+					<string>Main</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>com.apple.developer.networking.HotspotHelper</key>
+	<array>
+		<string>com.nuvoton.NuThermostat-iOS</string>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,6 @@
+framework module Pods_NuThermostat_iOS_NuThermostat_iOSUITests {
+  umbrella header "Pods-NuThermostat_iOS-NuThermostat_iOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
